@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AeroTracker Dashboard
+
+A modern web application that provides documentation and endpoints for interacting with FlightRadar24 data. Built with Next.js.
+
+## Features
+
+- 🛩️ Real-time flight tracking data
+- 🌍 Geographic bounds filtering
+- ✈️ Detailed flight information
+- 🏢 Airport and airline data
+- 🔍 Search functionality
+- 🌓 Dark/Light theme support
+- 📱 Responsive design
+
+## API Endpoints
+
+### Flights
+- `GET /api/flights` - Get all active flights
+- `GET /api/flights?bounds=lat1,lat2,lon1,lon2` - Get flights within geographical bounds
+- `POST /api/flights` - Get flight details
+- `POST /api/distance` - Calculate distance between flight and airport
+
+### Airports
+- `GET /api/airports` - Get all airports
+- `GET /api/airports?icta={code}` - Get airport by ICAO/IATA code
+
+### Airlines
+- `GET /api/airlines` - Get all airlines
+
+### Zones
+- `GET /api/zones` - Get FlightRadar24 coverage zones
+
+### Search
+- `GET /api/search?q={query}` - Search flights, airports, or airlines
+
+## Technology Stack
+
+- Next.js
+- Tailwind CSS
+- [shadcn/ui](https://ui.shadcn.com/) components
+- [FlightRadarAPI](https://github.com/JeanExtreme002/FlightRadarAPI) - Nodejs package for accessing FlightRadar24 data
 
 ## Getting Started
 
-First, run the development server:
-
+1. Clone the repository
+2. Install dependencies:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. Run the development server:
+```bash
+npm run dev
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Credits
 
-## Learn More
+This project uses the [FlightRadarAPI](https://github.com/JeanExtreme002/FlightRadarAPI) package by [JeanExtreme002](https://github.com/JeanExtreme002) for accessing FlightRadar24 data.
 
-To learn more about Next.js, take a look at the following resources:
+## License
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT License
