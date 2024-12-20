@@ -9,7 +9,7 @@ export default function DocumentationPage() {
       <div className="space-y-6">
         <div className="flex justify-between items-center">
           <div className="space-y-2">
-            <h1 className="text-3xl font-bold">FlightRadar API Documentation</h1>
+            <h1 className="text-3xl font-bold">AeroTracker Documentation</h1>
             <p className="text-gray-500 dark:text-gray-400">
               A comprehensive API wrapper for FlightRadar24 data
             </p>
